@@ -1,10 +1,10 @@
-from API.API import API
+from API.ocr_API import ocr_API
 import os
 import logging
 
 logging.basicConfig(level=logging.INFO)
 
-api = API()
+api = ocr_API()
 
 
 class ImageInfoExtractor:

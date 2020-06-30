@@ -33,7 +33,7 @@ class Language:
     Turkish = 'tur'
 
 
-class API:
+class ocr_API:
     def __init__(
             self, api_key=API_KEY, overlay=False, language=Language.English, **kwargs
     ):

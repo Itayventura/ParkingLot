@@ -1,9 +1,9 @@
 import logging
 
 import mysql.connector
-from Entities.Image.Image import PathImage, UrlImage
-from Entities.Plate.Plate import Plate
-from Entities.Vehicle.Vehicle import Vehicle
+from Entities.Image import PathImage, UrlImage
+from Entities.Plate import Plate
+from Entities.Vehicle import Vehicle
 
 logging.basicConfig(level=logging.INFO)
 
@@ -72,7 +72,7 @@ class Repository:
             plate = Plate(record[0], Plate.get_type_from_str(record[1]))
             images = []
 
-            if record[3] == "Y":
+            if record[3]:
                 images.append(UrlImage(record[2], record[4]))
             else:
                 images.append(PathImage(record[2], record[4]))
@@ -85,7 +85,7 @@ class Repository:
                     plate = Plate(record[0], Plate.get_type_from_str(record[1]))
                     images = []
 
-                if record[3] == "Y":
+                if record[3]:
                     images.append(UrlImage(record[2], record[4]))
                 else:
                     images.append(PathImage(record[2], record[4]))

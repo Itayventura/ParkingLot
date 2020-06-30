@@ -1,14 +1,14 @@
 import unittest
-from API import API
+from API import ocr_API
 
 URL = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/1956_Florida_%28USA%29_License_Plate.JPG/1200px-1956_Florida_%28USA%29_License_Plate.JPG'
 broken_URL = 'dofgn'
 
 
-class TestAPI(unittest.TestCase):
+class test_ocr_API(unittest.TestCase):
 
     def setUp(self):
-        self.api = API()
+        self.api = ocr_API()
 
     def test_ocr_url(self):
         parsed_text = self.api.ocr_url(URL)

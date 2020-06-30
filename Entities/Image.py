@@ -3,6 +3,7 @@ from abc import ABC
 
 class Image(ABC):
 
+    #date_timr
     def __init__(self, source, dateTime):
         self.source = source
         self.dateTime = dateTime

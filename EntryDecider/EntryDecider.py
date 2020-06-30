@@ -1,4 +1,4 @@
-from Entities.Plate.Plate import Plate, PlateType
+from Entities.Plate import Plate, PlateType
 import re
 import logging
 

@@ -1,6 +1,6 @@
 import unittest
 from EntryDecider import EntryDecider
-from Entities.Plate.Plate import Plate, PlateType
+from Entities.Plate import PlateType
 
 contents = ['JUN\n7SUE187',
             '— FLORIDA\n—TRANSPORTER—',
