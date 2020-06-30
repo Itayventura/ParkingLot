@@ -1,0 +1,12 @@
+CREATE TABLE `plates` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`content` VARCHAR(255) NULL DEFAULT NULL,
+	`type` ENUM('STARTS_WITH_U','DIPLOMAT','TRANSPORTER','TWO_LAST_DIGITS','MOTOR','REGULAR') NOT NULL,
+	PRIMARY KEY (`id`),
+	UNIQUE INDEX `content` (`content`),
+	INDEX `type` (`type`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=450
+;
